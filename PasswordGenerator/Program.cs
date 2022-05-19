@@ -6,12 +6,8 @@ string specialCharacters = "!#$%&'()*+,-./:;<=>?@[]_`{|}~";
 // We created string to concatenate all characters.
 string password = "";
 
-// The first letter of the password must be uppercase. Thanks to Random class we created, we will be able to choose the first letter of our password from capitalLetters.
-Random firstCharacter = new Random();
-password+=capitalLetters[firstCharacter.Next(capitalLetters.Length)];
-
-// We set the first letter of the password, 14 letters left. (We decided to make a 15 letter password.)
-for (int i = 1; i < 15; i++)
+// We decided to make a 15-letter password.
+for (int i = 1; i < 16; i++)
 {
     // We choose the type of the next letter.
     Random arrRnd = new Random();
@@ -46,3 +42,4 @@ for (int i = 1; i < 15; i++)
 
 // And our password is ready.
 Console.WriteLine($"Your new password:\n{password}");
+Console.ReadKey();
